@@ -10,15 +10,32 @@ def get_winnner(c1,c2):
             return 1
         else:
             return -1
+    if c1 == 'paper':
+        if c2 == 'scissors':
+            return 1
+        else:
+            return -1
+    if c1 == 'scissors':
+        if c2 == 'paper':
+            return -1
+        else:
+            return 1
 
-while computer_wins < 5:
-    human_choice = input('Enter your choice:')
+
+while abs(computer_wins) <3:
+    # human_choice = input('Enter your choice:')
+    human_choice = random.choice(['rock', 'paper', 'scissors'])
     if human_choice == 'exit':
         break
     computer_choice = random.choice(['rock', 'paper', 'scissors'])
 
-    print("Human input:",human_choice,"Computer input:",computer_choice)
+
     computer_wins+=int(get_winnner(human_choice,computer_choice))
-    print(computer_wins)
+    print("Human input:",human_choice,"Computer input:",computer_choice,"Score:",computer_wins)
+
+if computer_wins > 0 :
+    print("You lose")
+else:
+    print("You win")
 
 

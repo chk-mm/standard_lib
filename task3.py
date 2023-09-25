@@ -18,6 +18,7 @@ for x in values_of_prediction['daily']['temperature_2m_max']:
 
 indexofday = values_of_prediction['daily']['temperature_2m_max'].index(max_weather)
 # test = values_of_prediction['daily']['time'][indexofday]
-print(max_weather,values_of_prediction['daily']['time'][indexofday])
+# print(max_weather,values_of_prediction['daily']['time'][indexofday])
 # datetime.fromisoformat(test)
+print(indexofday.fromisoformat())
 # pprint(response.json())
